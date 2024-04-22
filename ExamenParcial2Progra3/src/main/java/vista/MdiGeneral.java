@@ -42,14 +42,9 @@ public class MdiGeneral extends javax.swing.JFrame {
         menuCerrar_sesion = new javax.swing.JMenuItem();
         jMenu1 = new javax.swing.JMenu();
         jMenu3 = new javax.swing.JMenu();
-        jMenuItem3 = new javax.swing.JMenuItem();
         jMenuItem4 = new javax.swing.JMenuItem();
         jMenu4 = new javax.swing.JMenu();
         jMenu8 = new javax.swing.JMenu();
-        jMenu7 = new javax.swing.JMenu();
-        menuTablaBancos = new javax.swing.JMenuItem();
-        menuTablaTipoPago = new javax.swing.JMenuItem();
-        menuTablaTipoMoneda = new javax.swing.JMenuItem();
         jMenu5 = new javax.swing.JMenu();
         jMenu9 = new javax.swing.JMenu();
         jMenu6 = new javax.swing.JMenu();
@@ -90,22 +85,14 @@ public class MdiGeneral extends javax.swing.JFrame {
 
         jMenu1.setText("Catalogos");
 
-        jMenu3.setText("Mantenimientos");
+        jMenu3.setText("Mantenimiento");
         jMenu3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenu3ActionPerformed(evt);
             }
         });
 
-        jMenuItem3.setText("Mantenimiento Cursos");
-        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem3ActionPerformed(evt);
-            }
-        });
-        jMenu3.add(jMenuItem3);
-
-        jMenuItem4.setText("Mantenimiento Alumnos");
+        jMenuItem4.setText("Mantenimiento Clientes");
         jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem4ActionPerformed(evt);
@@ -119,31 +106,8 @@ public class MdiGeneral extends javax.swing.JFrame {
 
         jMenu4.setText("Procesos");
 
-        jMenu8.setText("Asignación de Cursos a Maestros ");
+        jMenu8.setText("CRUD");
         jMenu4.add(jMenu8);
-
-        jMenu7.setText("Tesoreria");
-
-        menuTablaBancos.setText("Tabla Bancos");
-        menuTablaBancos.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                menuTablaBancosActionPerformed(evt);
-            }
-        });
-        jMenu7.add(menuTablaBancos);
-
-        menuTablaTipoPago.setText("Tabla Tipo de pago");
-        jMenu7.add(menuTablaTipoPago);
-
-        menuTablaTipoMoneda.setText("Tabla Tipo de monedas");
-        menuTablaTipoMoneda.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                menuTablaTipoMonedaActionPerformed(evt);
-            }
-        });
-        jMenu7.add(menuTablaTipoMoneda);
-
-        jMenu4.add(jMenu7);
 
         jMenuBar1.add(jMenu4);
 
@@ -177,41 +141,18 @@ public class MdiGeneral extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jMenu3ActionPerformed
 
-    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
-        // TODO add your handling code here:
-        MantenimientoCursos ventana = new MantenimientoCursos();
-        jDesktopPane1.add(ventana);
-        Dimension desktopSize = jDesktopPane1.getSize();
-        Dimension FrameSize = ventana.getSize();
-        ventana.setLocation((desktopSize.width - FrameSize.width) / 2, (desktopSize.height - FrameSize.height) / 2);
-    }//GEN-LAST:event_jMenuItem3ActionPerformed
-
     private void menuAbrir_sesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuAbrir_sesionActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_menuAbrir_sesionActionPerformed
 
     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
         // TODO add your handling code here:
+        MantenimientoCliente ventana = new MantenimientoCliente();
+        jDesktopPane1.add(ventana);
+        Dimension desktopSize = jDesktopPane1.getSize();
+        Dimension FrameSize = ventana.getSize();
+        ventana.setLocation((desktopSize.width - FrameSize.width) / 2, (desktopSize.height - FrameSize.height) / 2);
     }//GEN-LAST:event_jMenuItem4ActionPerformed
-
-    private void menuTablaBancosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuTablaBancosActionPerformed
-        // TODO add your handling code here:
-        MantenimientoBancos ventana = new MantenimientoBancos();
-        jDesktopPane1.add(ventana);
-        Dimension desktopSize = jDesktopPane1.getSize();
-        Dimension FrameSize = ventana.getSize();
-        ventana.setLocation((desktopSize.width - FrameSize.width) / 2, (desktopSize.height - FrameSize.height) / 2);
-
-    }//GEN-LAST:event_menuTablaBancosActionPerformed
-
-    private void menuTablaTipoMonedaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuTablaTipoMonedaActionPerformed
-        // TODO add your handling code here:
-        MantenimientoTipoMonedas ventana = new MantenimientoTipoMonedas();
-        jDesktopPane1.add(ventana);
-        Dimension desktopSize = jDesktopPane1.getSize();
-        Dimension FrameSize = ventana.getSize();
-        ventana.setLocation((desktopSize.width - FrameSize.width) / 2, (desktopSize.height - FrameSize.height) / 2);
-    }//GEN-LAST:event_menuTablaTipoMonedaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -256,18 +197,13 @@ public class MdiGeneral extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu4;
     private javax.swing.JMenu jMenu5;
     private javax.swing.JMenu jMenu6;
-    private javax.swing.JMenu jMenu7;
     private javax.swing.JMenu jMenu8;
     private javax.swing.JMenu jMenu9;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem menuAbrir_sesion;
     private javax.swing.JMenuItem menuCerrar_sesion;
-    private javax.swing.JMenuItem menuTablaBancos;
-    private javax.swing.JMenuItem menuTablaTipoMoneda;
-    private javax.swing.JMenuItem menuTablaTipoPago;
     // End of variables declaration//GEN-END:variables
 }
